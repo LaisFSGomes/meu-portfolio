@@ -12,7 +12,7 @@ export const ContactIcon: React.FC<ContactIconProps> = ({
   text,
 }) => {
     const onContactClick = () => {
-        window.location.href = link;
+        window.open(link, "_blank");
     }
   return (
     <ContactMeWrapper onClick={onContactClick}>
