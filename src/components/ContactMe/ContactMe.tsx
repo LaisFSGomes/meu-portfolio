@@ -14,23 +14,23 @@ export const ContactMe: React.FC = () => {
       <Container>
         <ContactIcon
           icon={<EmailOutlinedIcon fontSize="large" />}
-          link=""
+          link="mailto:laisfsgomes@gmail.com"
           text="laisfsgomes@gmail.com"
         />
         <ContactIcon
           icon={<GitHubIcon fontSize="large" />}
-          link=""
+          link="https://github.com/LaisFSGomes"
           text="@LaisFSGomes"
         />
         <ContactIcon
           icon={<LinkedInIcon fontSize="large" />}
-          link=""
+          link="https://www.linkedin.com/in/laisfsgomes/"
           text="/in/laisfsgomes"
         />
         <ContactIcon
           icon={<InstagramIcon fontSize="large" />}
-          link=""
-          text="@laisfsg"
+          link="https://www.instagram.com/laisfsg_"
+          text="@laisfsg_"
         />
       </Container>
     </ContactMeWrapper>

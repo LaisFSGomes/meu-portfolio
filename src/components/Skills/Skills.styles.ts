@@ -15,6 +15,7 @@ export const Container = styled(Box)({
   placeItems: "center",
   gridTemplateColumns: "repeat(7, 1fr)",
   gridGap: "1em",
+  paddingBottom: "2em",
   "@media (max-width: 900px)": {
     gridTemplateColumns: "repeat(6, 1fr)",
   },

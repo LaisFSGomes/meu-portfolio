@@ -1,9 +1,8 @@
 import React from "react";
 import { ContactMeWrapper, Text } from "./ContactIcon.styles";
-
 interface ContactIconProps {
   icon: React.ReactNode;
-  link?: string;
+  link: string;
   text: string;
 }
 
@@ -12,8 +11,11 @@ export const ContactIcon: React.FC<ContactIconProps> = ({
   link,
   text,
 }) => {
+    const onContactClick = () => {
+        window.location.href = link;
+    }
   return (
-    <ContactMeWrapper>
+    <ContactMeWrapper onClick={onContactClick}>
       {icon}
       <Text> {text} </Text>
     </ContactMeWrapper>

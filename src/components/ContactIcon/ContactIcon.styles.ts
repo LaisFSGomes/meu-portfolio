@@ -1,6 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Typography } from "@mui/material";
 const icon = require("assets/icons/contactdraw.png");
+
 export const ContactMeWrapper = styled(Box)({
   backgroundImage: `url(${icon})`,
   backgroundSize: "90px 90px",
@@ -12,6 +13,7 @@ export const ContactMeWrapper = styled(Box)({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  cursor: "pointer",
   "& svg": {
     "& path": {
       fill: "#FFFFFF",
