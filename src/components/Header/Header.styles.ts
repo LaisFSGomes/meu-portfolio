@@ -8,6 +8,13 @@ export const HeaderWrapper = styled(Box)({
     justifyContent: "space-around",
     alignItems: "center",
     padding: "0 2em",
+    "@media (max-width: 760px)": {
+        padding: "0em",
+        paddingLeft: "1em",
+    },
+    "@media (max-width: 600px)": {
+        height: "270px",
+    }
 });
 
 export const PersonalWrapper = styled(Box)({
