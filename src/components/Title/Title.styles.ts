@@ -7,6 +7,7 @@ export const TitleTypography = styled(Typography)({
     fontSize: "2em",
     fontWeight: 400,
     paddingBottom: "1em",
+    zIndex: "2",
     "@media (max-width: 760px)": {
         paddingBottom: "0.5em",
         fontSize: "1.5em",

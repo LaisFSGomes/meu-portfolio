@@ -2,6 +2,7 @@ import { Button } from "components/Button";
 import React from "react";
 import {
   ActionsWrapper,
+  HeaderDraw,
   HeaderWrapper,
   Image,
   Job,
@@ -11,11 +12,13 @@ import {
 } from "./Header.styles";
 
 const imagem = require("assets/images/minhafoto.png");
+const headerDraw = require("assets/icons/draw/Vectordrawing.png");
 
 export const Header: React.FC = () => {
   return (
     <HeaderWrapper id="cv">
-      <PersonalWrapper>
+      <PersonalWrapper> 
+        <HeaderDraw  />
         <PersonalWrapper>
           <Title>Oi, eu sou a</Title>
           <Name>Lais Gomes</Name>

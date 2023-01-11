@@ -11,6 +11,7 @@ export const SkillWrapper = styled(Box)({
   padding: "2px",
   width: "100px",
   height: "120px",
+  zIndex: "2",
   "&:hover": {
     "& img": {
       transition: "all 0.5s ease-in-out",

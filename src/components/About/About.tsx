@@ -1,10 +1,11 @@
 import { Title } from "components/Title";
 import React from "react";
-import { AboutText, AboutWrapper } from "./About.styles";
+import { AboutDraw, AboutText, AboutWrapper } from "./About.styles";
 
 export const About: React.FC = () => {
   return (
     <AboutWrapper id="about">
+      <AboutDraw />
       <Title>Sobre Mim</Title>
       <AboutText>
         Atualmente eu sou uma estudante do último semestre de engenharia de computação na

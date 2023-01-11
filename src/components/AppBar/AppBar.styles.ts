@@ -7,6 +7,11 @@ export const AppBarWrapper = styled(Box)({
   display: "flex",
   justifyContent: "flex-end",
   padding: "0 20px",
+  zIndex: "100",
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
   "@media (max-width: 600px)": {
     height: "40px",
   },
