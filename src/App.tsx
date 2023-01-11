@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, AppBar, Header } from './components';
+import { About, AppBar, Header, Skills } from './components';
 
 export const App: React.FC = () => {
   return (
@@ -7,6 +7,7 @@ export const App: React.FC = () => {
       <AppBar />
       <Header />
       <About />
+      <Skills />
     </React.Fragment>
   );
 };

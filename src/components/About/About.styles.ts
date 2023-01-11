@@ -10,18 +10,6 @@ export const AboutWrapper = styled(Box)({
     padding: "2em",
 });
 
-export const AboutTitle = styled(Typography)({
-    fontFamily: "Poppins, sans-serif",
-    color: "#FFFFFF",
-    fontSize: "2em",
-    fontWeight: 400,
-    paddingBottom: "1em",
-    "@media (max-width: 760px)": {
-        paddingBottom: "0.5em",
-        fontSize: "1.5em",
-    },
-});
-
 export const AboutText = styled(Typography)({
     fontSize: "1em",
     fontWeight: 400,
@@ -36,4 +24,4 @@ export const AboutText = styled(Typography)({
         width: "95%",
         fontSize: "0.8em",
     },
-})
+});
