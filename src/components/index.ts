@@ -5,3 +5,4 @@ export { Header} from "./Header";
 export { Skills } from "./Skills";
 export { SkillCard } from "./SkillCard";
 export { Title } from "./Title";
+export { Footer } from "./Footer";
