@@ -14,9 +14,12 @@ export const FooterTitle = styled(Typography)({
   color: "#FFFFFF",
   fontFamily: "Poppins, sans-serif",
   fontSize: "1em",
+  textAlign: "center",
 });
+
 export const FooterGit = styled(Typography)({
   color: "#FFFFFF",
   fontFamily: "Poppins, sans-serif",
   fontSize: "0.8em",
+  textAlign: "center",
 });
