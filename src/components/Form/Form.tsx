@@ -1,6 +1,8 @@
 import { Button, Input, Title } from "components";
 import React from "react";
-import { Container, FormWrapper } from "./Form.styles";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { Container, FormDraw, FormWrapper } from "./Form.styles";
 
 export const Form: React.FC = () => {
   const [email, setEmail] = React.useState("");
@@ -22,8 +24,9 @@ export const Form: React.FC = () => {
   };
   return (
     <FormWrapper>
+      <FormDraw />
       <Title>Entre em Contato</Title>
-      <Container>
+      <Container data-aos="fade-up">
         <Input
           label="e-mail"
           id="email"
