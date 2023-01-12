@@ -6,12 +6,17 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const ContactMe: React.FC = () => {
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, [])
   return (
     <ContactMeWrapper>
       <Title>Onde me Encontrar</Title>
-      <Container>
+      <Container data-aos = "fade-up">
         <ContactIcon
           icon={<EmailOutlinedIcon fontSize="large" />}
           link="mailto:laisfsgomes@gmail.com"

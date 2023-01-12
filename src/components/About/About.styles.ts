@@ -27,6 +27,12 @@ export const AboutDraw = styled("div")({
     height: "150px",
   },
 });
+export const Container = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+})
 export const AboutText = styled(Typography)({
   fontSize: "1em",
   fontWeight: 400,

@@ -22,11 +22,16 @@ import {
   styledcomponent,
   ts,
 } from "assets/icons/skills";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export const Skills: React.FC = () => {
+  React.useEffect(() => {
+    Aos.init({duration: 2000});
+  }, []);
   return (
     <SkillsWrapper>
       <Title>Habilidades</Title>
-      <Container>
+      <Container data-aos = "fade-up">
         <SkillCard title="React" image={react} />
         <SkillCard title="NextJS" image={nextjs} />
         <SkillCard title="Angular" image={angular} />

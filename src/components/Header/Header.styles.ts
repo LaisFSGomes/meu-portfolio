@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 const headerDraw = require("assets/icons/draw/Vectordrawing.png");
 
 export const HeaderWrapper = styled(Box)({
-    height: "420px",
+    height: "90vh",
     background: "#2C0041",
     display: "flex",
     justifyContent: "space-around",
@@ -30,7 +30,7 @@ export const HeaderDraw = styled("div")({
   position: "absolute",
   top: 0,
   left: "-100px",
-  zIndex: "-10",
+  zIndex: "1",
 });
 
 export const PersonalWrapper = styled(Box)({
