@@ -1,4 +1,4 @@
-import { ContactIcon } from "components/ContactIcon";
+import { ContactIcon } from "components";
 import { Title } from "components/Title";
 import React from "react";
 import { ContactMeWrapper, Container } from "./ContactMe.styles";
@@ -16,7 +16,7 @@ export const ContactMe: React.FC = () => {
   return (
     <ContactMeWrapper>
       <Title>Onde me Encontrar</Title>
-      <Container data-aos = "fade-up">
+      <Container data-aos = "zoom-in">
         <ContactIcon
           icon={<EmailOutlinedIcon fontSize="large" />}
           link="mailto:laisfsgomes@gmail.com"

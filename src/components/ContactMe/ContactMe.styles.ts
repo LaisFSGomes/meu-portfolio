@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 export const ContactMeWrapper = styled(Box)({
     background: "#2C0041",

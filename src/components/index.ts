@@ -1,9 +1,12 @@
 export { About } from "./About";
 export { AppBar } from "./AppBar";
 export { Button } from "./Button";
+export { ContactIcon} from "./ContactIcon";
 export { ContactMe } from "./ContactMe";
-export { Header} from "./Header";
-export { Skills } from "./Skills";
-export { SkillCard } from "./SkillCard";
-export { Title } from "./Title";
 export { Footer } from "./Footer";
+export { Form } from "./Form";
+export { Header} from "./Header";
+export { Input } from "./Input";
+export { SkillCard } from "./SkillCard";
+export { Skills } from "./Skills";
+export { Title } from "./Title";
