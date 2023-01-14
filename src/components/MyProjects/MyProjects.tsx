@@ -29,10 +29,12 @@ export const MyProjects: React.FC = () => {
       alt: "Spotfy",
     },
   ];
+  
   return (
     <MyProjectsWrapper>
       <Title>Projetos</Title>
       <Swiper items={items}/>
+      
     </MyProjectsWrapper>
   );
 };
