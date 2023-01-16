@@ -1,6 +1,5 @@
 import { SwiperItem } from "components/SwiperItem";
 import React from "react";
-// import { Actions, ActionsButton, SwiperList, SwiperWrapper } from "./Swiper.styles";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import {
@@ -12,6 +11,8 @@ import {
 interface SwiperItemProps {
   src: string;
   alt: string;
+  title: string;
+  link: string;
 }
 interface SwiperProps {
   items: SwiperItemProps[];
@@ -28,9 +29,13 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
       const pageElement = page.current as HTMLDivElement;
       const scrollWidth = pageElement.scrollWidth;
       carouselElement.scrollLeft += scrollWidth;
-      if (carouselElement.scrollLeft >= (carouselElement.scrollWidth - carouselElement.scrollLeft/2)) {
+      if (
+        carouselElement.scrollLeft >=
+        carouselElement.scrollWidth - carouselElement.scrollLeft / 2
+      ) {
         carouselElement.scrollLeft = 0;
       }
+      console.log(scrollWidth);
     }
   };
   const handlePrev = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -41,24 +46,33 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
       const scrollWidth = pageElement.scrollWidth;
       carouselElement.scrollLeft -= scrollWidth;
       if (carouselElement.scrollLeft <= 0) {
-        carouselElement.scrollLeft = carouselElement.scrollWidth - carouselElement.scrollLeft/2;
+        carouselElement.scrollLeft =
+          carouselElement.scrollWidth - carouselElement.scrollLeft / 2;
+          // carouselElement.scrollWidth - carouselElement.scrollLeft/6;
       }
+      console.log(scrollWidth);
     }
   };
 
   return (
-    <SwiperWrapper ref = {page}>
-      <Carousel ref = {carousel} >
+    <SwiperWrapper ref={page}>
+      <Carousel ref={carousel}>
         {items.map((item, index) => (
-          <SwiperItem key={index} src={item.src} alt={item.alt} />
+          <SwiperItem
+            key={index}
+            src={item.src}
+            alt={item.alt}
+            link={item.link}
+            title={item.title}
+          />
         ))}
       </Carousel>
       <Actions>
-        <ActionsButton onClick={handlePrev} >
-          <ArrowBackIosRoundedIcon />
+        <ActionsButton onClick={handlePrev}>
+          <ArrowBackIosRoundedIcon fontSize="large" />
         </ActionsButton>
-        <ActionsButton onClick={handleNext} >
-          <ArrowForwardIosRoundedIcon />
+        <ActionsButton onClick={handleNext}>
+          <ArrowForwardIosRoundedIcon fontSize="large" />
         </ActionsButton>
       </Actions>
     </SwiperWrapper>

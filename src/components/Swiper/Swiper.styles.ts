@@ -7,6 +7,10 @@ export const SwiperWrapper = styled(Box)({
   flexDirection: "column",
   alignItems: "center",
   height: "70vh",
+  zIndex: "10",
+  "@media (max-width: 900px)": {
+    width: "100%",
+  },
 });
 export const Carousel = styled(Box)({
   width: "100%",
@@ -15,6 +19,7 @@ export const Carousel = styled(Box)({
   overflowY: "hidden",
   scrollBehavior: "smooth",
   listStyle: "none",
+  borderRadius: "20px",
   "&::-webkit-scrollbar": {
     display: "none",
   },
@@ -26,7 +31,7 @@ export const Actions = styled(Box)({
   alignItems: "center",
 });
 export const ActionsButton = styled(Button)({
-  backgroundColor: "transparent",
+  background: "transparent",
   border: "none",
   cursor: "pointer",
   color: "#FFFFFF",
