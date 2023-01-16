@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 const headerDraw = require("assets/icons/draw/Vectordrawing.png");
 
 export const HeaderWrapper = styled(Box)({
-    height: "90vh",
+    height: "80vh",
     background: "#2C0041",
     display: "flex",
     justifyContent: "space-around",

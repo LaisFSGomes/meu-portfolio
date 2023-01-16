@@ -48,7 +48,7 @@ export const MyProjects: React.FC = () => {
 
   return (
     <MyProjectsWrapper>
-      <Title>Projetos</Title>
+      <Title>Meus Projetos</Title>
       <Swiper items={items} />
     </MyProjectsWrapper>
   );
