@@ -60,9 +60,9 @@ export const SectionsTypography = styled("a")({
     },
   },
   "&.light": {
-    color: "#010002",
+    color: "#6B1D86",
     "&:hover": {
-      color: "#1E1E1E",
+      color: "#49006A",
     },
   },
   "@media (max-width: 1300px)": {
