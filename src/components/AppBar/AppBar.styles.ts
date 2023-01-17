@@ -15,7 +15,7 @@ export const AppBarWrapper = styled(Box)({
     background: "#49006A",
   },
   "&.light": {
-    background: "#9D4BC2",
+    background: "#E1E1E1",
   },
   "@media (max-width: 600px)": {
     height: "40px",

@@ -1,16 +1,22 @@
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-const headerDraw = require("assets/icons/draw/Vectordrawing.png");
+const headerDrawDark = require("assets/icons/draw/drawheader-dark.png");
+const headerDrawLight = require("assets/icons/draw/drawheader-light.png");
 
 export const HeaderWrapper = styled(Box)({
-    height: "80vh",
+  height: "80vh",
+  display: "flex",
+  justifyContent: "space-around",
+  alignItems: "center",
+  padding: "0 2em",
+  zIndex: "-100",
+  paddingTop: "50px",
+  "&.dark": {
     background: "#2C0041",
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    padding: "0 2em",
-    zIndex: "-100",
-    paddingTop: "50px",
+  },
+  "&.light": {
+    background: "#EDEDED",
+  },
   "@media (max-width: 760px)": {
     padding: "0em",
     paddingLeft: "1em",
@@ -21,8 +27,19 @@ export const HeaderWrapper = styled(Box)({
   },
 });
 
-export const HeaderDraw = styled("div")({
-  backgroundImage: `url(${headerDraw})`,
+export const HeaderDrawDark = styled("div")({
+  backgroundImage: `url(${headerDrawDark})`,
+  backgroundSize: "260px 250px",
+  backgroundRepeat: "no-repeat",
+  width: "260px",
+  height: "250px",
+  position: "absolute",
+  top: 0,
+  left: "-100px",
+  zIndex: "1",
+});
+export const HeaderDrawLight = styled("div")({
+  backgroundImage: `url(${headerDrawLight})`,
   backgroundSize: "260px 250px",
   backgroundRepeat: "no-repeat",
   width: "260px",
@@ -41,9 +58,14 @@ export const PersonalWrapper = styled(Box)({
 
 export const Title = styled(Typography)({
   fontFamily: "Poppins, sans-serif",
-  color: "#FFFFFF",
   fontSize: "2em",
   fontWeight: 400,
+  "&.dark": {
+    color: "#FFFFFF",
+  },
+  "&.light": {
+    color: "#6B1D86",
+  },
   "@media (max-width: 760px)": {
     fontSize: "1.5em",
   },
@@ -55,6 +77,12 @@ export const Name = styled(Typography)({
   fontSize: "3em",
   fontWeight: 400,
   paddingLeft: "20px",
+  "&.dark": {
+    color: "#FFFFFF",
+  },
+  "&.light": {
+    color: "#6B1D86",
+  },
   "@media (max-width: 760px)": {
     fontSize: "2em",
     paddingLeft: "10px",
@@ -63,10 +91,15 @@ export const Name = styled(Typography)({
 
 export const Job = styled(Typography)({
   fontFamily: "Poppins, sans-serif",
-  color: "#BFB7B7",
   fontSize: "1em",
   fontWeight: 400,
   paddingLeft: "20px",
+  "&.dark": {
+    color: "#BFB7B7",
+  },
+  "&.light": {
+    color: "#7A7A7A",
+  },
   "@media (max-width: 760px)": {
     fontSize: "0.7em",
     paddingLeft: "10px",
