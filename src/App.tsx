@@ -1,10 +1,10 @@
-import { MyProjects } from "components/";
 import React from "react";
-import { About, AppBar, ContactMe, Footer, Form, Header, Skills } from "./components";
+import { About, AppBar, ContactMe, Footer, Form, Header, MyProjects, Skills } from "./components";
+import { ModeProvider } from "./contexts";
 
 export const App: React.FC = () => {  
   return (
-    <React.Fragment>
+    <ModeProvider>
       <AppBar />
       <Header />
       <About />
@@ -13,6 +13,6 @@ export const App: React.FC = () => {
       <Form />
       <ContactMe />
       <Footer />
-    </React.Fragment>
+    </ModeProvider>
   );
 };

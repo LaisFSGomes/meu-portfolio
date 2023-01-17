@@ -9,6 +9,7 @@ import {
   SectionsTypography,
 } from "./AppBar.styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import { SwitchMode } from "components/SwitchMode";
 export const AppBar: React.FC = () => {
   const sections = [
     "Curriculo",
@@ -29,14 +30,17 @@ export const AppBar: React.FC = () => {
   return (
     <AppBarWrapper>
       <AppBarComputer>
+      <SwitchMode />
         {sections.map((section, index) => {
           return <SectionsTypography key={index}>{section}</SectionsTypography>;
         })}
       </AppBarComputer>
       <AppBarMobile>
+      <SwitchMode />
         <ButtonBar onClick={handleClick}>
           <MenuIcon />
         </ButtonBar>
+        
         <MenuMobile
           id="menu-mobile"
           anchorEl={anchorEl}

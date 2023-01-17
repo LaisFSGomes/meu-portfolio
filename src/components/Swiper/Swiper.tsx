@@ -50,7 +50,6 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
       if (carouselElement.scrollLeft <= 0) {
         carouselElement.scrollLeft =
           carouselElement.scrollWidth - carouselElement.scrollLeft / 2;
-          // carouselElement.scrollWidth - carouselElement.scrollLeft/6;
       }
       console.log(scrollWidth);
     }

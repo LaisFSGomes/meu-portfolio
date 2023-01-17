@@ -12,4 +12,5 @@ export { SkillCard } from "./SkillCard";
 export { Skills } from "./Skills";
 export { Swiper } from "./Swiper";
 export { SwiperItem } from "./SwiperItem";
+export { SwitchMode } from "./SwitchMode";
 export { Title } from "./Title";
