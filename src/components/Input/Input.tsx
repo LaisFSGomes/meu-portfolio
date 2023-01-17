@@ -2,6 +2,7 @@ import { InputLabel } from "@mui/material";
 import React from "react";
 import { Input as InputForm } from "@mui/material";
 import { Form } from "./Input.styles";
+import { ModeContext } from "contexts/DarkLight";
 interface InputProps {
   label?: string;
   id?: string;
@@ -16,8 +17,9 @@ export const Input: React.FC<InputProps> = ({
   onChange,
   value,
 }) => {
+  const { mode } = React.useContext(ModeContext);
   return (
-    <Form>
+    <Form className= {mode} >
       <InputLabel htmlFor={id}>{label}</InputLabel>
       <InputForm
         required

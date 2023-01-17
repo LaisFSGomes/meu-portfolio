@@ -2,9 +2,11 @@ import { Button, Input, Title } from "components";
 import React from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Container, FormDraw, FormWrapper } from "./Form.styles";
+import { Container, FormDrawDark, FormDrawLight, FormWrapper } from "./Form.styles";
+import { ModeContext } from "contexts/DarkLight";
 
 export const Form: React.FC = () => {
+  const { mode } = React.useContext(ModeContext);
   const [email, setEmail] = React.useState("");
   const [name, setName] = React.useState("");
   const [title, setTitle] = React.useState("");
@@ -22,9 +24,12 @@ export const Form: React.FC = () => {
   const onMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value);
   };
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <FormWrapper>
-      <FormDraw />
+    <FormWrapper className= {mode} >
+      {mode === "dark" ? <FormDrawDark /> : <FormDrawLight /> }
       <Title>Entre em Contato</Title>
       <Container data-aos="fade-up">
         <Input

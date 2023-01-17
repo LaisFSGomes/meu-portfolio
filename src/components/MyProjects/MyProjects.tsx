@@ -1,6 +1,7 @@
 import { Swiper, Title } from "components";
 import React from "react";
 import { MyProjectsWrapper } from "./MyProjects.styles";
+import { ModeContext } from "contexts/DarkLight";
 
 export const MyProjects: React.FC = () => {
   const items = [
@@ -46,8 +47,9 @@ export const MyProjects: React.FC = () => {
     },
   ];
 
+  const { mode } = React.useContext(ModeContext);
   return (
-    <MyProjectsWrapper>
+    <MyProjectsWrapper className= {mode} >
       <Title>Meus Projetos</Title>
       <Swiper items={items} />
     </MyProjectsWrapper>
