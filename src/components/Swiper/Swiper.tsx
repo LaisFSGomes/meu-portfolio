@@ -1,22 +1,24 @@
-import { SwiperItem } from "components/SwiperItem";
 import React from "react";
+import { SwiperItem } from "components";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ModeContext } from "contexts";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import { ModeContext } from "contexts/DarkLight";
 import {
   Actions,
   ActionsButton,
   Carousel,
   SwiperWrapper,
 } from "./Swiper.styles";
+
 interface SwiperItemProps {
   src: string;
   alt: string;
   title: string;
   link: string;
 }
+
 interface SwiperProps {
   items: SwiperItemProps[];
 }
@@ -54,7 +56,6 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
       }
     }
   };
-
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);

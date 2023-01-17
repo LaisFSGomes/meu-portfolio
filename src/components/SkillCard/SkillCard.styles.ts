@@ -1,5 +1,5 @@
-import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { Box, Typography } from "@mui/material";
 
 export const SkillWrapper = styled(Box)({
   display: "flex",
@@ -21,9 +21,9 @@ export const SkillWrapper = styled(Box)({
     "& img": {
       transition: "all 0.5s ease-in-out",
       width: "53px",
-      "@media (max-width: 800px)":{
+      "@media (max-width: 800px)": {
         width: "43px",
-      }
+      },
     },
   },
   "@media (max-width: 800px)": {
@@ -35,12 +35,14 @@ export const SkillWrapper = styled(Box)({
     height: "95px",
   },
 });
+
 export const SkillImage = styled("img")({
   width: "50px",
-  "@media (max-width: 800px)":{
+  "@media (max-width: 800px)": {
     width: "40px",
   },
 });
+
 export const SkillTitle = styled(Typography)({
   fontFamily: "Poppins, sans-serif",
   fontSize: "0.8em",

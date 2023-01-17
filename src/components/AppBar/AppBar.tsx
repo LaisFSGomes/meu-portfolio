@@ -1,5 +1,8 @@
 import React from "react";
 import { MenuItem } from "@mui/material";
+import { SwitchMode } from "components";
+import { ModeContext } from "contexts";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBarComputer,
   AppBarMobile,
@@ -8,10 +11,6 @@ import {
   MenuMobile,
   SectionsTypography,
 } from "./AppBar.styles";
-import MenuIcon from "@mui/icons-material/Menu";
-import { SwitchMode } from "components/SwitchMode";
-// import { SectionsProps } from "assets/interfaces/interfaces";
-import { ModeContext } from "contexts";
 
 export const AppBar: React.FC = () => {
   interface SectionType {
@@ -45,14 +44,15 @@ export const AppBar: React.FC = () => {
     },
   ];
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const { mode } = React.useContext(ModeContext);
   const open = Boolean(anchorEl);
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const { mode } = React.useContext(ModeContext);
 
   return (
     <AppBarWrapper className={mode}>
@@ -65,18 +65,17 @@ export const AppBar: React.FC = () => {
               key={index}
               href={`#${section.id}`}
             >
-              {" "}
-              {section.name}{" "}
+              {section.name}
             </SectionsTypography>
           );
         })}
       </AppBarComputer>
+
       <AppBarMobile>
         <SwitchMode />
         <ButtonBar className={mode} onClick={handleClick}>
           <MenuIcon />
         </ButtonBar>
-
         <MenuMobile
           id="menu-mobile"
           anchorEl={anchorEl}

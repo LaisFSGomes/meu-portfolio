@@ -48,6 +48,7 @@ export const SwiperItemInfo = styled(Box)({
   transition: "width 2s, color 0.1s ",
   padding: "0 2em",
 });
+
 export const SwiperItemTitle = styled(Typography)({
   fontFamily: "Poppins, sans-serif",
   fontSize: "2em",

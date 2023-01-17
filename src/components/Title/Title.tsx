@@ -1,6 +1,6 @@
 import React from "react";
 import { TitleTypography } from "./Title.styles";
-import { ModeContext } from "contexts/DarkLight";
+import { ModeContext } from "contexts";
 
 interface TitleProps {
   className?: string;
@@ -8,5 +8,9 @@ interface TitleProps {
 }
 export const Title: React.FC<TitleProps> = ({ className, children }) => {
   const { mode } = React.useContext(ModeContext);
-  return <TitleTypography className={`${className} ${mode}`}>{children}</TitleTypography>;
+  return (
+    <TitleTypography className={`${className} ${mode}`}>
+      {children}
+    </TitleTypography>
+  );
 };

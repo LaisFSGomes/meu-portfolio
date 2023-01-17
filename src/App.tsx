@@ -1,8 +1,17 @@
 import React from "react";
-import { About, AppBar, ContactMe, Footer, Form, Header, MyProjects, Skills } from "./components";
+import {
+  About,
+  AppBar,
+  ContactMe,
+  Footer,
+  Form,
+  Header,
+  MyProjects,
+  Skills,
+} from "./components";
 import { ModeProvider } from "./contexts";
 
-export const App: React.FC = () => {  
+export const App: React.FC = () => {
   return (
     <ModeProvider>
       <AppBar />

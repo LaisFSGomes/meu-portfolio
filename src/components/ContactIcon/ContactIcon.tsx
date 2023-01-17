@@ -1,6 +1,10 @@
 import React from "react";
-import { ContactMeWrapperDark, ContactMeWrapperLight, Text } from "./ContactIcon.styles";
-import { ModeContext } from "contexts/DarkLight";
+import {
+  ContactMeWrapperDark,
+  ContactMeWrapperLight,
+  Text,
+} from "./ContactIcon.styles";
+import { ModeContext } from "contexts";
 interface ContactIconProps {
   icon: React.ReactNode;
   link: string;
@@ -16,12 +20,8 @@ export const ContactIcon: React.FC<ContactIconProps> = ({
   const onContactClick = () => {
     window.open(link, "_blank");
   };
+
   return (
-    // <ContactMeWrapper onClick={onContactClick}>
-    //   {icon}
-    //   <Text> {text} </Text>
-    // </ContactMeWrapper>
-    
     <React.Fragment>
       {mode === "dark" ? (
         <ContactMeWrapperDark onClick={onContactClick}>
@@ -31,7 +31,7 @@ export const ContactIcon: React.FC<ContactIconProps> = ({
       ) : (
         <ContactMeWrapperLight onClick={onContactClick}>
           {icon}
-          <Text className= {mode} > {text} </Text>
+          <Text className={mode}> {text} </Text>
         </ContactMeWrapperLight>
       )}
     </React.Fragment>

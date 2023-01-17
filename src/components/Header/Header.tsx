@@ -1,7 +1,8 @@
-import { Button } from "components/Button";
 import React from "react";
+import { Button } from "components";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ModeContext } from "contexts";
 import {
   ActionsWrapper,
   HeaderDrawDark,
@@ -13,7 +14,6 @@ import {
   PersonalWrapper,
   Title,
 } from "./Header.styles";
-import { ModeContext } from "contexts/DarkLight";
 const imageDark = require("assets/images/minhafoto-dark.png");
 const imageLight = require("assets/images/minhafoto-light.png");
 

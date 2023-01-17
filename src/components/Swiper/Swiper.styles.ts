@@ -12,6 +12,7 @@ export const SwiperWrapper = styled(Box)({
     width: "100%",
   },
 });
+
 export const Carousel = styled(Box)({
   width: "100%",
   display: "flex",
@@ -25,12 +26,14 @@ export const Carousel = styled(Box)({
     display: "none",
   },
 });
+
 export const Actions = styled(Box)({
   width: "10%",
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "center",
 });
+
 export const ActionsButton = styled("button")({
   background: "transparent",
   border: "none",

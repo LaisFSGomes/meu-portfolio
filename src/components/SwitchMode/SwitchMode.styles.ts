@@ -17,7 +17,6 @@ export const SwitchUI = styled(Switch)({
         )}" d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z"/></svg>')`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-
       },
       "& + .MuiSwitch-track": {
         opacity: 1,

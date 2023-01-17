@@ -1,5 +1,5 @@
-import { Box, IconButton, Menu } from "@mui/material";
 import { styled } from "@mui/system";
+import { Box, IconButton, Menu } from "@mui/material";
 
 export const AppBarWrapper = styled(Box)({
   height: "50px",
@@ -21,6 +21,7 @@ export const AppBarWrapper = styled(Box)({
     height: "40px",
   },
 });
+
 export const AppBarComputer = styled(Box)({
   width: "90%",
   display: "flex",
@@ -33,6 +34,7 @@ export const AppBarComputer = styled(Box)({
     display: "none",
   },
 });
+
 export const InfoWrapper = styled(Box)({
   display: "flex",
   alignItems: "center",
@@ -47,6 +49,7 @@ export const InfoWrapper = styled(Box)({
     gap: "10px",
   },
 });
+
 export const SectionsTypography = styled("a")({
   fontSize: "15px",
   fontWeight: 550,
@@ -80,6 +83,7 @@ export const SectionsTypography = styled("a")({
     },
   },
 });
+
 export const AppBarMobile = styled(Box)({
   display: "none",
   "@media (max-width: 775px)": {
@@ -88,6 +92,7 @@ export const AppBarMobile = styled(Box)({
     width: "80%",
   },
 });
+
 export const ButtonBar = styled(IconButton)({
   "&.dark": {
     "& svg": {
@@ -103,6 +108,7 @@ export const ButtonBar = styled(IconButton)({
     background: "transparent",
   },
 });
+
 export const MenuMobile = styled(Menu)({
   "& .MuiPaper-root": {
     background: "#D1D1D1",

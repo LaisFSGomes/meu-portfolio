@@ -1,5 +1,5 @@
-import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { Box, Typography } from "@mui/material";
 const aboutDrawDark = require("assets/icons/draw/drawabout-dark.png");
 const aboutDrawLight = require("assets/icons/draw/drawabout-light.png");
 
@@ -16,6 +16,7 @@ export const AboutWrapper = styled(Box)({
     background: "#EDEDED",
   },
 });
+
 export const AboutDrawDark = styled("div")({
   backgroundImage: `url(${aboutDrawDark})`,
   backgroundSize: "200px 200px",
@@ -33,6 +34,7 @@ export const AboutDrawDark = styled("div")({
     height: "150px",
   },
 });
+
 export const AboutDrawLight = styled("div")({
   backgroundImage: `url(${aboutDrawLight})`,
   backgroundSize: "200px 200px",
@@ -50,18 +52,19 @@ export const AboutDrawLight = styled("div")({
     height: "150px",
   },
 });
+
 export const Container = styled(Box)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-})
+});
+
 export const AboutText = styled(Typography)({
   fontSize: "1em",
   fontWeight: 400,
   paddingLeft: "20px",
   textAlign: "justify",
-  // color: "#FFFFFF",
   width: "60%",
   zIndex: "2",
   "&.dark": {

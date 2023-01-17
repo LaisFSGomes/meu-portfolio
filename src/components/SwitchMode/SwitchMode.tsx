@@ -1,6 +1,6 @@
 import React from "react";
 import { SwitchUI } from "./SwitchMode.styles";
-import { ModeContext } from "contexts/DarkLight";
+import { ModeContext } from "contexts";
 
 export const SwitchMode: React.FC = () => {
   const { mode, darkMode, lightMode } = React.useContext(ModeContext);

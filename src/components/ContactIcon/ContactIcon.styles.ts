@@ -27,6 +27,7 @@ export const ContactMeWrapperDark = styled(Box)({
     backgroundSize: "80px 80px",
   },
 });
+
 export const ContactMeWrapperLight = styled(Box)({
   backgroundImage: `url(${iconLight})`,
   backgroundSize: "90px 90px",

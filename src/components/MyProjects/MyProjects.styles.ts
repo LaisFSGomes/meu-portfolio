@@ -14,6 +14,7 @@ export const MyProjectsWrapper = styled(Box)({
     background: "#EDEDED",
   },
 });
+
 export const Container = styled(Box)({
   width: "100%",
   maxWidth: "800px",
@@ -26,7 +27,4 @@ export const Container = styled(Box)({
   "@media (max-width: 800px)": {
     padding: "0rem",
   },
-  "@media (max-width: 570px)": {},
-  "@media (max-width: 420px)": {},
-  "@media (max-width: 290px)": {},
 });

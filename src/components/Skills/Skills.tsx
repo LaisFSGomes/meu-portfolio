@@ -1,7 +1,9 @@
-import { SkillCard } from "components/SkillCard";
-import { Title } from "components/Title";
+import { SkillCard, Title } from "components";
 import React from "react";
 import { Container, SkillsWrapper } from "./Skills.styles";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { ModeContext } from "contexts";
 import {
   angular,
   bootstrap,
@@ -22,18 +24,17 @@ import {
   styledcomponent,
   ts,
 } from "assets/icons/skills";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { ModeContext } from "contexts/DarkLight";
+
 export const Skills: React.FC = () => {
   const { mode } = React.useContext(ModeContext);
   React.useEffect(() => {
-    Aos.init({duration: 2000});
+    Aos.init({ duration: 2000 });
   }, []);
+
   return (
-    <SkillsWrapper className= {mode} id = "skills">
+    <SkillsWrapper className={mode} id="skills">
       <Title>Habilidades</Title>
-      <Container data-aos = "fade-up">
+      <Container data-aos="fade-up">
         <SkillCard title="React" image={react} />
         <SkillCard title="NextJS" image={nextjs} />
         <SkillCard title="Angular" image={angular} />

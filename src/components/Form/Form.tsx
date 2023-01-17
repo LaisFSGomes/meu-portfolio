@@ -1,9 +1,9 @@
-import { Button, Input, Title } from "components";
 import React from "react";
+import { Button, Input, Title } from "components";
+import { Container, FormDrawDark, FormDrawLight, FormWrapper } from "./Form.styles";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Container, FormDrawDark, FormDrawLight, FormWrapper } from "./Form.styles";
-import { ModeContext } from "contexts/DarkLight";
+import { ModeContext } from "contexts";
 
 export const Form: React.FC = () => {
   const { mode } = React.useContext(ModeContext);
@@ -27,6 +27,7 @@ export const Form: React.FC = () => {
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+
   return (
     <FormWrapper className= {mode} id = "contact">
       {mode === "dark" ? <FormDrawDark /> : <FormDrawLight /> }

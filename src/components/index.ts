@@ -1,11 +1,11 @@
 export { About } from "./About";
 export { AppBar } from "./AppBar";
 export { Button } from "./Button";
-export { ContactIcon} from "./ContactIcon";
+export { ContactIcon } from "./ContactIcon";
 export { ContactMe } from "./ContactMe";
 export { Footer } from "./Footer";
 export { Form } from "./Form";
-export { Header} from "./Header";
+export { Header } from "./Header";
 export { Input } from "./Input";
 export { MyProjects } from "./MyProjects";
 export { SkillCard } from "./SkillCard";

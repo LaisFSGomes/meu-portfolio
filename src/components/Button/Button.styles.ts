@@ -9,7 +9,7 @@ export const ButtonWrapper = styled("button")({
   fontFamily: "Poppins, sans-serif",
   fontSize: "0.7em",
   fontWeight: 300,
-  cursor: "pointer",  
+  cursor: "pointer",
   "&.dark": {
     background: "#601B80",
     color: "#FFFFFF",
