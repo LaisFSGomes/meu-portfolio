@@ -10,6 +10,9 @@ import {
 } from "./AppBar.styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { SwitchMode } from "components/SwitchMode";
+// import { SectionsProps } from "assets/interfaces/interfaces";
+import { ModeContext } from "contexts";
+
 export const AppBar: React.FC = () => {
   const sections = [
     "Curriculo",
@@ -27,12 +30,14 @@ export const AppBar: React.FC = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const { mode } = React.useContext(ModeContext);
+
   return (
-    <AppBarWrapper>
+    <AppBarWrapper className= {mode} >
       <AppBarComputer>
       <SwitchMode />
         {sections.map((section, index) => {
-          return <SectionsTypography key={index}>{section}</SectionsTypography>;
+          return <SectionsTypography className= {mode} key={index}>{section}</SectionsTypography>;
         })}
       </AppBarComputer>
       <AppBarMobile>

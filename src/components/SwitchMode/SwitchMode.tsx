@@ -12,7 +12,6 @@ export const SwitchMode: React.FC = () => {
   return (
     <React.Fragment>
       <SwitchUI value={mode} onChange={onChange} />
-      {/* <h1> {mode} </h1> */}
     </React.Fragment>
   );
 };

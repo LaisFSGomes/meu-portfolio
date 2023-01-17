@@ -3,7 +3,6 @@ import { styled } from "@mui/system";
 
 export const AppBarWrapper = styled(Box)({
   height: "50px",
-  background: "#49006A",
   display: "flex",
   justifyContent: "flex-end",
   padding: "0 20px",
@@ -12,6 +11,12 @@ export const AppBarWrapper = styled(Box)({
   top: 0,
   left: 0,
   right: 0,
+  "&.dark": {
+    background: "#49006A",
+  },
+  "&.light": {
+    background: "#9D4BC2",
+  },
   "@media (max-width: 600px)": {
     height: "40px",
   },
@@ -45,12 +50,20 @@ export const InfoWrapper = styled(Box)({
 export const SectionsTypography = styled("a")({
   fontSize: "15px",
   fontWeight: 550,
-  color: "#FFFFFF",
   cursor: "pointer",
   textTransform: "uppercase",
   fontFamily: "Poppins, sans-serif",
-  "&:hover": {
-    color: "#BFB7B7",
+  "&.dark": {
+    color: "#FFFFFF",
+    "&:hover": {
+      color: "#BFB7B7",
+    },
+  },
+  "&.light": {
+    color: "#010002",
+    "&:hover": {
+      color: "#1E1E1E",
+    },
   },
   "@media (max-width: 1300px)": {
     fontSize: "16px",
