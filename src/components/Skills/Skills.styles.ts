@@ -2,12 +2,17 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const SkillsWrapper = styled(Box)({
-  background: "#2C0041",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-around",
   alignItems: "center",
   padding: "2em",
+  "&.dark": {
+    background: "#2C0041",
+  },
+  "&.light": {
+    background: "#EDEDED",
+  },
 });
 
 export const Container = styled(Box)({

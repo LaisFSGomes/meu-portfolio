@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const SkillWrapper = styled(Box)({
-  background: "#510E70",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -12,6 +11,12 @@ export const SkillWrapper = styled(Box)({
   width: "100px",
   height: "120px",
   zIndex: "2",
+  "&.dark": {
+    background: "#510E70",
+  },
+  "&.light": {
+    background: "#D1D1D1",
+  },
   "&:hover": {
     "& img": {
       transition: "all 0.5s ease-in-out",
@@ -42,6 +47,12 @@ export const SkillTitle = styled(Typography)({
   color: "#FFFFFF",
   marginTop: "0.7em",
   textAlign: "center",
+  "&.dark": {
+    color: "#FFFFFF",
+  },
+  "&.light": {
+    color: "#6B1D86",
+  },
   "@media (max-width: 570px)": {
     fontSize: "0.6em",
   },

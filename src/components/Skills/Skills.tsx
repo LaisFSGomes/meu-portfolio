@@ -24,12 +24,14 @@ import {
 } from "assets/icons/skills";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ModeContext } from "contexts/DarkLight";
 export const Skills: React.FC = () => {
+  const { mode } = React.useContext(ModeContext);
   React.useEffect(() => {
     Aos.init({duration: 2000});
   }, []);
   return (
-    <SkillsWrapper>
+    <SkillsWrapper className= {mode} >
       <Title>Habilidades</Title>
       <Container data-aos = "fade-up">
         <SkillCard title="React" image={react} />
