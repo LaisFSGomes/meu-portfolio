@@ -14,13 +14,35 @@ import { SwitchMode } from "components/SwitchMode";
 import { ModeContext } from "contexts";
 
 export const AppBar: React.FC = () => {
-  const sections = [
-    "Curriculo",
-    "Sobre Mim",
-    "Habilidades",
-    "Projetos",
-    "Entre em Contato",
-    "Onde me encontrar",
+  interface SectionType {
+    name: string;
+    id: string;
+  }
+  const sections: SectionType[] = [
+    {
+      name: "Curriculo",
+      id: "cv",
+    },
+    {
+      name: "Sobre Mim",
+      id: "about",
+    },
+    {
+      name: "Habilidades",
+      id: "skills",
+    },
+    {
+      name: "Projetos",
+      id: "projects",
+    },
+    {
+      name: "Entre em Contato",
+      id: "contact",
+    },
+    {
+      name: "Onde me encontrar",
+      id: "social",
+    },
   ];
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -33,19 +55,28 @@ export const AppBar: React.FC = () => {
   const { mode } = React.useContext(ModeContext);
 
   return (
-    <AppBarWrapper className= {mode} >
+    <AppBarWrapper className={mode}>
       <AppBarComputer>
-      <SwitchMode />
+        <SwitchMode />
         {sections.map((section, index) => {
-          return <SectionsTypography className= {mode} key={index}>{section}</SectionsTypography>;
+          return (
+            <SectionsTypography
+              className={mode}
+              key={index}
+              href={`#${section.id}`}
+            >
+              {" "}
+              {section.name}{" "}
+            </SectionsTypography>
+          );
         })}
       </AppBarComputer>
       <AppBarMobile>
-      <SwitchMode />
-        <ButtonBar onClick={handleClick}>
+        <SwitchMode />
+        <ButtonBar className={mode} onClick={handleClick}>
           <MenuIcon />
         </ButtonBar>
-        
+
         <MenuMobile
           id="menu-mobile"
           anchorEl={anchorEl}
@@ -54,14 +85,16 @@ export const AppBar: React.FC = () => {
           MenuListProps={{
             "aria-labelledby": "basic-button",
           }}
-        > 
-        {sections.map((section, index) => {
-          return (
-            <MenuItem key={index} >
-                <SectionsTypography>{section}</SectionsTypography>
-            </MenuItem>
-          )
-        })}
+        >
+          {sections.map((section, index) => {
+            return (
+              <MenuItem key={index}>
+                <SectionsTypography href={section.id}>
+                  {section.name}
+                </SectionsTypography>
+              </MenuItem>
+            );
+          })}
         </MenuMobile>
       </AppBarMobile>
     </AppBarWrapper>

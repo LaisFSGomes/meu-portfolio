@@ -31,7 +31,7 @@ export const Skills: React.FC = () => {
     Aos.init({duration: 2000});
   }, []);
   return (
-    <SkillsWrapper className= {mode} >
+    <SkillsWrapper className= {mode} id = "skills">
       <Title>Habilidades</Title>
       <Container data-aos = "fade-up">
         <SkillCard title="React" image={react} />

@@ -4,7 +4,7 @@ import { styled } from "@mui/system";
 export const AppBarWrapper = styled(Box)({
   height: "50px",
   display: "flex",
-  justifyContent: "flex-end",
+  justifyContent: "space-evenly",
   padding: "0 20px",
   zIndex: "100",
   position: "fixed",
@@ -22,7 +22,7 @@ export const AppBarWrapper = styled(Box)({
   },
 });
 export const AppBarComputer = styled(Box)({
-  width: "80%",
+  width: "90%",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -76,8 +76,8 @@ export const SectionsTypography = styled("a")({
   "@media (max-width: 775px)": {
     color: "#49006A",
     "&:hover": {
-        color: "#601B81",
-      },
+      color: "#601B81",
+    },
   },
 });
 export const AppBarMobile = styled(Box)({
@@ -85,15 +85,35 @@ export const AppBarMobile = styled(Box)({
   "@media (max-width: 775px)": {
     display: "flex",
     justifyContent: "space-between",
-    width: "100%",
+    width: "80%",
   },
 });
 export const ButtonBar = styled(IconButton)({
-  "& svg": {
-    color: "#FFFFFF",
+  "&.dark": {
+    "& svg": {
+      color: "#FFFFFF",
+    },
+  },
+  "&.light": {
+    "& svg": {
+      color: "#6B1D86",
+    },
   },
   "&:hover": {
     background: "transparent",
   },
 });
-export const MenuMobile = styled(Menu)({});
+export const MenuMobile = styled(Menu)({
+  "& .MuiPaper-root": {
+    background: "#D1D1D1",
+    width: "80%",
+    display: "flex",
+    flexDirection: "column",
+    textAlight: "center",
+    "& .MuiMenuItem-root": {
+      "&:hover": {
+        background: "#e1e1e1",
+      },
+    },
+  },
+});

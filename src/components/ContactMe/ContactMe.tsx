@@ -16,7 +16,7 @@ export const ContactMe: React.FC = () => {
     Aos.init({ duration: 2000 });
   }, [])
   return (
-    <ContactMeWrapper className= {mode} >
+    <ContactMeWrapper className= {mode} id="social" >
       <Title>Onde me Encontrar</Title>
       <Container data-aos = "zoom-in">
         <ContactIcon

@@ -49,7 +49,7 @@ export const MyProjects: React.FC = () => {
 
   const { mode } = React.useContext(ModeContext);
   return (
-    <MyProjectsWrapper className= {mode} >
+    <MyProjectsWrapper className= {mode} id="projects">
       <Title>Meus Projetos</Title>
       <Swiper items={items} />
     </MyProjectsWrapper>

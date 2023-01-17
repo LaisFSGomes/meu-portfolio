@@ -28,7 +28,7 @@ export const Form: React.FC = () => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <FormWrapper className= {mode} >
+    <FormWrapper className= {mode} id = "contact">
       {mode === "dark" ? <FormDrawDark /> : <FormDrawLight /> }
       <Title>Entre em Contato</Title>
       <Container data-aos="fade-up">

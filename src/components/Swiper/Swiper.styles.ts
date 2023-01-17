@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 
 export const SwiperWrapper = styled(Box)({
   width: "70%",
