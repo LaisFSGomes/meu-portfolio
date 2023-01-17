@@ -8,13 +8,15 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ModeContext } from "contexts/DarkLight";
 
 export const ContactMe: React.FC = () => {
+  const { mode } = React.useContext(ModeContext);
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
   }, [])
   return (
-    <ContactMeWrapper>
+    <ContactMeWrapper className= {mode} >
       <Title>Onde me Encontrar</Title>
       <Container data-aos = "zoom-in">
         <ContactIcon
