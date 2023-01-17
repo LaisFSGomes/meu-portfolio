@@ -31,9 +31,17 @@ export const Actions = styled(Box)({
   justifyContent: "space-evenly",
   alignItems: "center",
 });
-export const ActionsButton = styled(Button)({
+export const ActionsButton = styled("button")({
   background: "transparent",
   border: "none",
   cursor: "pointer",
-  color: "#FFFFFF",
+  "&.dark": {
+    color: "#FFFFFF",
+  },
+  "&.light": {
+    color: "#5A1779",
+  },
+  "&:active": {
+    transform: "scale(0.9)",
+  },
 });

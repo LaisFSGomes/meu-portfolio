@@ -4,6 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import { ModeContext } from "contexts/DarkLight";
 import {
   Actions,
   ActionsButton,
@@ -21,6 +22,7 @@ interface SwiperProps {
 }
 
 export const Swiper: React.FC<SwiperProps> = ({ items }) => {
+  const { mode } = React.useContext(ModeContext);
   const carousel = React.useRef();
   const page = React.useRef();
 
@@ -37,7 +39,6 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
       ) {
         carouselElement.scrollLeft = 0;
       }
-      console.log(scrollWidth);
     }
   };
   const handlePrev = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -51,7 +52,6 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
         carouselElement.scrollLeft =
           carouselElement.scrollWidth - carouselElement.scrollLeft / 2;
       }
-      console.log(scrollWidth);
     }
   };
 
@@ -73,10 +73,10 @@ export const Swiper: React.FC<SwiperProps> = ({ items }) => {
         ))}
       </Carousel>
       <Actions>
-        <ActionsButton onClick={handlePrev}>
+        <ActionsButton className= {mode} onClick={handlePrev}>
           <ArrowBackIosRoundedIcon fontSize="large" />
         </ActionsButton>
-        <ActionsButton onClick={handleNext}>
+        <ActionsButton className= {mode} onClick={handleNext}>
           <ArrowForwardIosRoundedIcon fontSize="large" />
         </ActionsButton>
       </Actions>
