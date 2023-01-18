@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box } from "@mui/material";
-const formDrawDark = require("assets/icons/draw/drawform-dark.png");
-const formDrawLight = require("assets/icons/draw/drawform-light.png");
+import formDrawLight from "assets/icons/draw/drawform-light.png";
+import formDrawDark from "assets/icons/draw/drawform-dark.png";
 
 export const FormWrapper = styled(Box)({
   display: "grid",

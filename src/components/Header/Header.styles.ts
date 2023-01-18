@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Typography } from "@mui/material";
-const headerDrawDark = require("assets/icons/draw/drawheader-dark.png");
-const headerDrawLight = require("assets/icons/draw/drawheader-light.png");
+import headerDrawDark from "assets/icons/draw/drawheader-dark.png";
+import headerDrawLight from "assets/icons/draw/drawheader-light.png";
 
 export const HeaderWrapper = styled(Box)({
   height: "80vh",

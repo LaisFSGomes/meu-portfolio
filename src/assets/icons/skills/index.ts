@@ -1,18 +1,38 @@
-export const angular = require("./angular.png");
-export const bootstrap = require("./bootstrap.png");
-export const css = require("./css.png");
-export const figma = require("./figma.png");
-export const git = require("./git.png");
-export const github = require("./github.png");
-export const html = require("./html.png");
-export const jquery = require("./jquery.png");
-export const js = require("./js.png");
-export const linux = require("./linux.png");
-export const mui = require("./mui.png");
-export const mysql = require("./mysql.png");
-export const nextjs = require("./nextjs.png");
-export const react = require("./react.png");
-export const regex = require("./regex.png");
-export const sass = require("./sass.png");
-export const styledcomponent = require("./styledcomponent.png");
-export const ts = require("./ts.png");
+import angular from "./angular.png";
+import bootstrap from "./bootstrap.png";
+import css from "./css.png";
+import figma from "./figma.png";
+import git from "./git.png";
+import github from "./github.png";
+import html from "./html.png";
+import jquery from "./jquery.png";
+import js from "./js.png";
+import linux from "./linux.png";
+import mui from "./mui.png";
+import mysql from "./mysql.png";
+import nextjs from "./nextjs.png";
+import react from "./react.png";
+import regex from "./regex.png";
+import sass from "./sass.png";
+import styledcomponent from "./styledcomponent.png";
+import ts from "./ts.png";
+export {
+  angular,
+  bootstrap,
+  css,
+  figma,
+  git,
+  github,
+  html,
+  jquery,
+  js,
+  linux,
+  mui,
+  mysql,
+  nextjs,
+  react,
+  regex,
+  sass,
+  styledcomponent,
+  ts,
+};

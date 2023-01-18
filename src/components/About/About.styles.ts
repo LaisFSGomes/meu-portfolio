@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Typography } from "@mui/material";
-const aboutDrawDark = require("assets/icons/draw/drawabout-dark.png");
-const aboutDrawLight = require("assets/icons/draw/drawabout-light.png");
+import aboutDrawDark from "assets/icons/draw/drawabout-dark.png";
+import aboutDrawLight from "assets/icons/draw/drawabout-light.png";
 
 export const AboutWrapper = styled(Box)({
   display: "flex",

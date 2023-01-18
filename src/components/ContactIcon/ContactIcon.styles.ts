@@ -1,7 +1,7 @@
 import { styled } from "@mui/system";
 import { Box, Typography } from "@mui/material";
-const iconDark = require("assets/icons/contactdraw-dark.png");
-const iconLight = require("assets/icons/contactdraw-light.png");
+import iconDark from "assets/icons/contactdraw-dark.png";
+import iconLight from "assets/icons/contactdraw-light.png";
 
 export const ContactMeWrapperDark = styled(Box)({
   backgroundImage: `url(${iconDark})`,

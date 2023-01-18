@@ -14,8 +14,8 @@ import {
   PersonalWrapper,
   Title,
 } from "./Header.styles";
-const imageDark = require("assets/images/minhafoto-dark.png");
-const imageLight = require("assets/images/minhafoto-light.png");
+import imageDark from "assets/images/minhafoto-dark.png";
+import imageLight from "assets/images/minhafoto-light.png";
 
 export const Header: React.FC = () => {
   const { mode } = React.useContext(ModeContext);
