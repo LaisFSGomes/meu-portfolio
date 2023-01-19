@@ -27,11 +27,8 @@ export const SwiperImage = styled("img")({
   height: "auto",
   userSelect: "none",
   objectFit: "none",
-  objectPosition: "top center",
+  objectPosition: "center",
   transition: "width 2s ",
-  "@media (max-width: 600px)": {
-    objectPosition: "top left",
-  },
 });
 
 export const SwiperItemInfo = styled(Box)({

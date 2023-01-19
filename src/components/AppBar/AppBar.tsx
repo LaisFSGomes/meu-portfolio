@@ -88,7 +88,7 @@ export const AppBar: React.FC = () => {
           {sections.map((section, index) => {
             return (
               <MenuItem key={index}>
-                <SectionsTypography href={section.id}>
+                <SectionsTypography href={`#${section.id}`}>
                   {section.name}
                 </SectionsTypography>
               </MenuItem>

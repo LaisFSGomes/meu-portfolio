@@ -2,15 +2,12 @@ import { styled } from "@mui/system";
 import { Box } from "@mui/material";
 
 export const SwiperWrapper = styled(Box)({
-  width: "70%",
+  width: "clamp(200px, 100%, 610px)",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   height: "70vh",
   zIndex: "10",
-  "@media (max-width: 900px)": {
-    width: "100%",
-  },
 });
 
 export const Carousel = styled(Box)({
