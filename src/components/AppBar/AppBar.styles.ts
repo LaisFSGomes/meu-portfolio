@@ -51,6 +51,7 @@ export const InfoWrapper = styled(Box)({
 });
 
 export const SectionsTypography = styled("a")({
+  zIndex: "100",
   fontSize: "15px",
   fontWeight: 550,
   cursor: "pointer",
@@ -77,6 +78,8 @@ export const SectionsTypography = styled("a")({
     letterSpacing: "0.01em",
   },
   "@media (max-width: 775px)": {
+    width: "100%",
+    height: "100%",
     color: "#49006A",
     "&:hover": {
       color: "#601B81",

@@ -60,13 +60,9 @@ export const AppBar: React.FC = () => {
         <SwitchMode />
         {sections.map((section, index) => {
           return (
-            <SectionsTypography
-              className={mode}
-              key={index}
-              href={`#${section.id}`}
-            >
-              {section.name}
-            </SectionsTypography>
+              <SectionsTypography href={`#${section.id}`} className={mode} key={index}>
+                {section.name}
+              </SectionsTypography>
           );
         })}
       </AppBarComputer>
