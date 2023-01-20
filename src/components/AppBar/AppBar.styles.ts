@@ -33,6 +33,7 @@ export const AppBarComputer = styled(Box)({
   "@media (max-width: 775px)": {
     display: "none",
   },
+
 });
 
 export const InfoWrapper = styled(Box)({
@@ -54,6 +55,10 @@ export const SectionsTypography = styled("a")({
   zIndex: "100",
   fontSize: "15px",
   fontWeight: 550,
+  position: "relative",
+  left: "0",
+  right: "100px",
+  transition: "all 0.3s ease-in-out", 
   cursor: "pointer",
   textTransform: "uppercase",
   fontFamily: "Poppins, sans-serif",
@@ -114,6 +119,7 @@ export const ButtonBar = styled(IconButton)({
 
 export const MenuMobile = styled(Menu)({
   "& .MuiPaper-root": {
+    zIndex: "1",
     background: "#D1D1D1",
     width: "80%",
     display: "flex",
